@@ -1,7 +1,7 @@
 /*
 	Hoisting - Setup Memory Space for Variables and Functions
 	before they are executed line by line.
-	Functions will execute fine: because it is set to memory with its code
+	Functions will execute fine: because it is set to memory with its code.
 	Variables will be set to undefined untill execution phase.
 */
 

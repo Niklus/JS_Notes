@@ -8,7 +8,7 @@ function greet1(name) {
 greet1('Tony');
 greet1();
 
-console.log('======================');
+console.log('----------------------');
 
 // With tenery operator
 function greet2(name) {
