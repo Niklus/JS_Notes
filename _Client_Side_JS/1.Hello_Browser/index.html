@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	<style>
+		.highlight{
+        	background-color: #0fc;
+		}
+	</style>
+</head>
+<body>
+    
+    <h1>Hello <span id="name"></span>!</h1>
+
+    <h2 class="msg">Hello Browser<h2>
+    <h2 class="msg">JavaScript<h2>
+
+    <script>    
+	    /*
+	      Window Object: JS entry point. The Window object is a global object, 
+	      no need for explicit usage of window e.g window.prompt('')
+	    */ 
+
+	    console.log(window);
+
+	    var name = prompt("Enter Your Name");  
+	    confirm("Name Entered: " + name);
+	    alert("Hello " + name);
+	   
+	   	/*
+	   	  Document Object: The most important property of Window Object
+	   	  Central to the DOM: Document Object Model, API.
+	   	*/
+	    var elmt = document.getElementById('name');       
+	    elmt.innerHTML = name;     
+	   
+	    // Returns only the first element with that selector
+	    var elmt1 = document.querySelector(".msg"); 
+	   	elmt1.style.backgroundColor="#0fc";
+
+	    // Returns all elements with that selector
+	    var elmts = document.querySelectorAll(".msg");
+	    elmts[0].style.color ="red";
+		elmts[1].style.color ="blue";
+
+        //Events
+		elmt.addEventListener("click", function(event){        
+            this.className = "highlight";
+	    });
+    </script>
+</body>
+</html>
