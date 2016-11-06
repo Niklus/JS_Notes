@@ -11,7 +11,7 @@ var john = {
     lastname: 'Doe'
 }
 
-// don't do this AT HOME! for demo purposes only!!!
+// don't try this AT HOME! for demo purposes only!!!
 john.__proto__ = person;
 console.log(john.getFullName());
 console.log(john.firstname);

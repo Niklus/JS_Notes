@@ -43,7 +43,7 @@ function makeSuperHuman(gender) {
 	this.gender = gender;
 	this.wings = 'two';       // Uniqe property and value
 	this.talk  = function(){
-		console.log('I can talk & fly' );  // 'Overiding' --wont look up the prtotype chain 
+		console.log('I can talk & fly' );  // 'Overiding' --wont look down the prtotype chain 
 	}    
 }
 

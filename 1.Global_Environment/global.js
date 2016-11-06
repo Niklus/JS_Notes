@@ -1,3 +1,4 @@
+
 /* 
   Global Object  = 'this' = 'window' 
   Window object is the browsers global Object

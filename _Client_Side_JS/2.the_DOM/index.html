@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document Object Model</title>
+</head>
+<body>
+
+	<h2 id='heading'>The Browser has three main programs</h2>
+	<ol>
+		<li>DOM interpreter</li>
+		<li>CSS interpreter </li>
+		<li>Javascript Engine</li>
+	</ol>
+	<p>These are collectively known as JIT (Just In Time) compilers:<br/>
+	Compiled in real time</p>
+
+	<script>
+	
+	// Document Object
+    console.log(document); //use dir(document) in the console
+    
+    document.getElementById('heading').onclick = function(){
+    	console.log('clicked');
+    };
+    // better to add events Natively using .addEventListener();
+    // computed thus not visible on the DOM
+
+    console.log(document.getElementById('heading'));
+
+	</script>
+</body>
+</html>
