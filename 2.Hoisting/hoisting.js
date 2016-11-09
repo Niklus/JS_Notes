@@ -1,8 +1,8 @@
 /*
 	Hoisting - Setup Memory Space for Variables and Functions
-	before they are executed line by line.
-	Functions will execute fine: because it is set to memory with its code.
-	Variables will be set to undefined untill execution phase.
+	during creation phase: before they are executed line by line.
+	Function STATEMENTS will execute fine, because they are set to memory in their entirety.
+	Variables will be set to undefined untill execution phase where they are set to the returned value.
 */
 
 b();

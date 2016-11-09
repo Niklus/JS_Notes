@@ -66,8 +66,12 @@ superWoman.talk();
 console.log('----------------');
 
 // They all share the same prototype thus avoidin duplicate objects
-console.log(John.__proto__);
-console.log(Mary.__proto__);
-console.log(superMan.__proto__);
-console.log(superWoman.__proto__);
-// Avoid __proto__ like the plague. Demo purposes only
+// Avoid obj.__proto__ like the plague
+// Use the 'read only' Object.getPrototypeOf(obj)
+// Avoid setting prototypes from objects, use E6 setPrototypeOf if necessary
+
+console.log(Object.getPrototypeOf(John));
+console.log(Object.getPrototypeOf(Mary));
+console.log(Object.getPrototypeOf(superMan));
+console.log(Object.getPrototypeOf(superWoman));
+console.log('----------------');

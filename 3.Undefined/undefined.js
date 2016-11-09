@@ -1,9 +1,9 @@
 /* 
 	undefined is a SPECIAL VALUE given to declared variables 
-	without assignment and hoisted variables.
- 	'not defined' means that the variable is not declared:
- 	During creation phase it didnt find a 'var something' to set up memory for - 'hoisting'
-	Dont explicitly set undefined --bad practice
+	without an assignment, and hoisted variables in the creation phase.
+ 	'Not Defined' means that the variable is not declared: During creation phase 
+ 	the enginde didnt find a 'var something' to set up memory for - 'hoist'
+	Dont explicitly set undefined --bad practice.
 */
 
 var a;
