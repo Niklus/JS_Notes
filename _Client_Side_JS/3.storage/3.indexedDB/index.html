@@ -10,10 +10,42 @@
 
 <script>
 
+	
+	/*
+		1. Open a database.
+		2. Create an object store in the database. 
+		3. Start a transaction and make a request to do some database operation, like adding or retrieving data.
+		4. Wait for the operation to complete by listening to the right kind of DOM event.
+		5. Do something with the results (which can be found on the request object).
+	*/
+
 	if (!window.indexedDB) {
-	    window.alert("Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.");
+		window.alert(" Your browser doesn't support a stable version of IndexedDB ");
+	} 
+
+	// Open a database
+
+	var db;
+
+	var request = window.indexedDB.open("MyTestDatabase", 3);
+
+    request.onerror = function(event) {
+  		// Do something with request.errorCode!
+  		alert("Database error: " + event.target.errorCode);
+	};
+	
+	request.onsuccess = function(event) {
+  	
+  		// Do something with request.result!
+  		db = event.target.result;
 	}
-  
+    
+
+
+
+
+
+
 </script>
 </body>
 </html>

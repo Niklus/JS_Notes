@@ -25,6 +25,12 @@ var model = {
     clearData: function(){   
         localStorage.data = JSON.stringify([]);
     }
+    
+    /*Alternative storage method with unique key
+    storeWithKey: function(data){
+        var key = Date.now().toString();
+        localStorage.setItem(key, data);
+    }*/
 };
 
 

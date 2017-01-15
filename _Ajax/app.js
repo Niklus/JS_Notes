@@ -14,7 +14,7 @@
 	xhttp.send();
 */
 
-const KEY = 'fjEvHyESwSoUh8164uQy1nJfEnBK2OOIEK4JQtJY';
+var KEY = 'fjEvHyESwSoUh8164uQy1nJfEnBK2OOIEK4JQtJY';
 
 
 // Wrapped in a function with a callback 'jQuery style'
