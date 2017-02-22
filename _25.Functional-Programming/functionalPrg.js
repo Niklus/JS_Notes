@@ -25,22 +25,30 @@ In functional programming, we strive to use “pure” functions as much as poss
 
 var PI = 3.14;
 
-const calculateArea = (radius) => radius * radius * PI; // Not pure: relies on valiable PI which isnt eplicitly passed as an argument.
+// Not pure: relies on valiable PI which isnt eplicitly passed as an argument.
+const calculateArea1 = (radius) => radius * radius * PI; 
 
-const calculateArea = (radius, PI) => radius * radius * PI; // Pure: it isn't reliant on this global variable.
-
+// Pure: it isn't reliant on this global variable PI
+const calculateArea2 = (radius, PI) => radius * radius * PI; 
 
 let count = 1;
-const increaseCount = (val) => count = count + val; // Not Pure
+const increaseCount = (val) => count = count + val; // Not Pure*/
 
 
-// Not pure: A side effect to the original array. Arrays: by refrence not value
 var array = [1, 2, 3, 4, 5];
+
+// Not pure: A side effect to the original array. Arrays are by refrence not value
+const reverseArray = (array) => array.reverse();
+
+
 var reversedArray = reverseArray(array);  
 
 console.log(reversedArray) // [ 5, 4, 3, 2, 1 ]
 console.log(array) // [ 5, 4, 3, 2, 1 ]  
 
+// Pure functions are predictable, deterministic and easy to test.
+// The goal is not to completely eliminate side effects, but confine them. Impure functions have there place.
+// Minimize the amount of impure code and segregate it from the rest of our program.
 
 
 
