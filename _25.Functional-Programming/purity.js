@@ -37,16 +37,22 @@ const increaseCount = (val) => count = count + val;
 // Pure
 const increaseCount = (val, count) => count = count + val;
 
-var array = [1, 2, 3, 4, 5];
+var myArray = [1, 2, 3, 4, 5];
 
-// Not pure: A side effect to the original array. Arrays are passed by refrence not value thus a side effect on a global object.
+// Depends on how you pass in the array
 const reverseArray = (array) => array.reverse();
 
-var reversedArray = reverseArray(array);  
+// Not pure: A side effect to the original array. Arrays are passed by refrence not value thus a side effect on a global object
+var reversedArray = reverseArray(myArray);  
 
 console.log(reversedArray) // [ 5, 4, 3, 2, 1 ]
-console.log(array) // [ 5, 4, 3, 2, 1 ]  
+console.log(myArray) // [ 5, 4, 3, 2, 1 ]
 
+// Pure: creating an array on the fly does not cause any side effects to any global object, variable
+var reversedArray = reverseArray([1,2,3,4,5]);
+
+console.log(reversedArray) // [5, 4, 3, 2, 1]
+console.log(myArray) // [1, 2, 3, 4, 5]
 // Pure functions are predictable, deterministic and easy to test.
 // The goal is not to completely eliminate side effects, but confine them. Impure functions have there place.
 // Minimize the amount of impure code and segregate it from the rest of our program.
