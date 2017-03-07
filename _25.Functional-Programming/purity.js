@@ -2,12 +2,11 @@
 
 Functional Programming
 
-Functional programming places a major emphasis on writing code using functions as “building blocks.”
-Your program is defined in terms of one main function. This main function is defined in terms of other functions, 
-which are in turn defined in terms of still more functions — until at the bottom level the functions are just 
-language primitives like “number” or “string.”
+Places a major emphasis on writing code using functions as “building blocks.”
+The program is defined in terms of one main function, defined in terms of other functions and so on
+until at the bottom level the functions are just language primitives.
 
-In functional programming, data is immutable — meaning it can’t be changed. Rather than changing data they take in, 
+In functional programming, data is immutable — it can’t be changed. Rather than changing data they take in, 
 functions in functional programming take in data as input and produce new values as output.
 
 */
@@ -22,7 +21,6 @@ In functional programming, we strive to use “pure” functions as much as poss
 */
 
 
-
 var PI = 3.14;
 
 // Not pure: relies on valiable PI which isnt eplicitly passed as an argument.
@@ -32,14 +30,17 @@ const calculateArea1 = (radius) => radius * radius * PI;
 const calculateArea2 = (radius, PI) => radius * radius * PI; 
 
 let count = 1;
-const increaseCount = (val) => count = count + val; // Not Pure*/
 
+// Not pure
+const increaseCount = (val) => count = count + val;
+
+// Pure
+const increaseCount = (val, count) => count = count + val;
 
 var array = [1, 2, 3, 4, 5];
 
-// Not pure: A side effect to the original array. Arrays are by refrence not value
+// Not pure: A side effect to the original array. Arrays are passed by refrence not value thus a side effect on a global object.
 const reverseArray = (array) => array.reverse();
-
 
 var reversedArray = reverseArray(array);  
 
