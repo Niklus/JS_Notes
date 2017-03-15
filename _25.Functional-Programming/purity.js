@@ -48,7 +48,7 @@ var reversedArray = reverseArray(myArray);
 console.log(reversedArray) // [ 5, 4, 3, 2, 1 ]
 console.log(myArray) // [ 5, 4, 3, 2, 1 ]
 
-// Case 2: Pure: creating an array on the fly does not cause any side effects to any global object, variable
+// Case 2: Acts Pure ? : creating an array on the fly does not cause any side effects to any global object, variable
 var reversedArray = reverseArray([1,2,3,4,5]);
 
 console.log(reversedArray) // [5, 4, 3, 2, 1]

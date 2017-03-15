@@ -6,9 +6,10 @@
   Object.freeze can be used to turn mutable objects to immutable objects.
 */
 
-var obj = {'a':1, 'b:2'};
+var obj = {'a':1, 'b' :2};
 Object.freeze(obj);
 Object.isFrozen(obj); // returns true
+
 obj.a = 10;           // new assignment has no affect
 console.log(obj.a); 
 
