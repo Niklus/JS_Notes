@@ -6,7 +6,7 @@
 */
 
 
-let myfunc = (x, cb) => cb(x) + x; // takes a callback function as a valu
+let myfunc = (x, cb) => cb(x) + x; // takes a callback function as a value
 
 let res  = myfunc(2,function(x){
 	return x * x;

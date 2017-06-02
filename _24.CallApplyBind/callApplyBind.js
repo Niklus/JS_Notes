@@ -17,7 +17,7 @@ var logName = function(lang1, lang2) {
 }
 
 var logPersonName = logName.bind(person); // Creates a copy
-logPersonName('en');
+logPersonName('en','es');
 
 logName.call(person, 'en', 'es'); // Executes directly
 

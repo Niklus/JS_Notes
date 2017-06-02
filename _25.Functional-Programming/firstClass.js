@@ -12,3 +12,5 @@ The ability to treat functions as values let’s us use them in the following wa
 
 Functions are the core unit of abstraction in functional programming
 */
+
+
